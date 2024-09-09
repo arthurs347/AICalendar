@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Calendar Tasks</title>
+</head>
+<body>
+<div role="header">
+    <h1><a href="index.html">AI Calendar</a></h1>
+</div>
+
+<div role="navigation">
+    <h3><a href="tasks.html" id="tasks-link">Tasks</a></h3>
+    <h3><a href="settings.html">Settings</a></h3>
+</div>
+
+<div id="tasks-section">
+    <h2 id="month">January</h2>
+    <div style="text-align: center;"><h1>Tasks for Today</h1></div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Time Block</th>
+        </tr>
+        </thead>
+        <tbody id="task-table-body">
+        <!-- Tasks will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Dropdown menu -->
+<div id="dropdown-menu" class="dropdown-menu">
+    <form id="task-form" method="POST">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName"> <br>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="datetime-local" id="dueDate" name="dueDate"> <br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description"> <br>
+
+        <label for="timeRequired">Time Required (format HH:MM):</label>
+        <input type="time" id="timeRequired" name="timeRequired"> <br>
+
+        <p>Priority:</p>
+        <input type="radio" id="high" name="priority" value="high">
+        <label for="high">High</label>
+        <input type="radio" id="med" name="priority" value="med">
+        <label for="med">Med</label>
+        <input type="radio" id="low" name="priority" value="low">
+        <label for="low">Low</label> <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

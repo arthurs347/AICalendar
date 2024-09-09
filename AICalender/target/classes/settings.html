@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div role="header">
+    <h1><a href="index.html"> AI Calendar </a></h1>
+</div>
+
+<div role="navigation">
+    <h3> <a href="tasks.html"> Tasks </a> </h3>
+    <h3>  <a href="settings.html"> Settings </a> </h3>
+</div>
+<body>
+<h2 id="month">January</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><div class="calendar-box"></div></td>
+        <td><div class="calendar-box"></div></td>
+        <td><div class="calendar-box"></div></td>
+        <td><div class="calendar-box"></div></td>
+        <td><div class="calendar-box">1</div></td>
+        <td><div class="calendar-box">2</div></td>
+        <td><div class="calendar-box">3</div></td>
+    </tr>
+    <tr>
+        <td><div class="calendar-box">4</div></td>
+        <td><div class="calendar-box">5</div></td>
+        <td><div class="calendar-box">6</div></td>
+        <td><div class="calendar-box">7</div></td>
+        <td><div class="calendar-box">8</div></td>
+        <td><div class="calendar-box">9</div></td>
+        <td><div class="calendar-box">10</div></td>
+    </tr>
+    <tr>
+        <td><div class="calendar-box">11</div></td>
+        <td><div class="calendar-box">12</div></td>
+        <td><div class="calendar-box">13</div></td>
+        <td><div class="calendar-box">14</div></td>
+        <td><div class="calendar-box">15</div></td>
+        <td><div class="calendar-box">16</div></td>
+        <td><div class="calendar-box">17</div></td>
+    </tr>
+    <tr>
+        <td><div class="calendar-box">18</div></td>
+        <td><div class="calendar-box">19</div></td>
+        <td><div class="calendar-box">20</div></td>
+        <td><div class="calendar-box">21</div></td>
+        <td><div class="calendar-box">22</div></td>
+        <td><div class="calendar-box">23</div></td>
+        <td><div class="calendar-box">24</div></td>
+    </tr>
+    <tr>
+        <td><div class="calendar-box">25</div></td>
+        <td><div class="calendar-box">26</div></td>
+        <td><div class="calendar-box">27</div></td>
+        <td><div class="calendar-box">28</div></td>
+        <td><div class="calendar-box">29</div></td>
+        <td><div class="calendar-box">30</div></td>
+        <td><div class="calendar-box">31</div></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Dropdown menu -->
+<div id="dropdown-menu" class="dropdown-menu" action="your-server-endpoint">
+
+    <form id="task-form"  method="POST" >
+
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName"> <br>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="datetime-local" id="dueDate" name="dueDate"> <br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description"> <br>
+
+        <label for="timeRequired">Time Required (format HH:MM):</label>
+        <input type="time" id="timeRequired" name="timeRequired"> <br>
+
+        <p>Priority:</p>
+        <input type="radio" id="high" name="priority" value="high">
+        <label for="high">High</label>
+        <input type="radio" id="med" name="priority" value="med">
+        <label for="med">Med</label>
+        <input type="radio" id="low" name="priority" value="low">
+        <label for="low">Low</label> <br>
+
+        <button type="submit">Submit</button>
+
+
+    </form>
+
+    <!-- Content of your dropdown menu -->
+</div>
+<script src="script.js"></script>
+
+
+</body>
+</html>
